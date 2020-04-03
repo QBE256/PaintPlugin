@@ -1,5 +1,5 @@
 /*
-  ペイント機能
+  ペイント機能 ver1.1
 
 [概要]
 このプラグインを導入するとで画面上にお絵描きができるようになります。
@@ -16,6 +16,13 @@ srpg studio ver 1.194以降
 
 [製作者名]
 キュウブ
+
+[更新履歴]
+ver 1.1 (2020/04/03 12:00)
+bug fix
+
+ver 1.0 (2020/04/03)
+new entry
 
 [規約]
 ・利用はSRPG Studioを使ったゲームに限ります。
@@ -82,8 +89,8 @@ var MouseDrawControl = {
 	drawAction: function() {
 		this._draw();
 
-		if (root.isInputState(InputType.BTN4)) {
-		//if (root.isMouseState(MouseType.LEFT)) {
+		//if (root.isInputState(InputType.BTN4)) {
+		if (root.isMouseState(MouseType.LEFT)) {
 			this._addAddress(root.getMouseX(), root.getMouseY());
 		}
 		else {
